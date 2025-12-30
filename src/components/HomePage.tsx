@@ -32,7 +32,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
       icon: Calendar
     },
     { 
-      title: 'Khazna ��� Early Repayment Experience Optimization',
+      title: 'Khazna  Early Repayment Experience Optimization',
       description: 'Making early repayment decisions clearer and more reassuring through guided UX and better hierarchy.',
       icon: TrendingUp
     }
@@ -135,7 +135,12 @@ export function HomePage({ onSectionChange }: HomePageProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {caseStudies.map((study, index) => {
             const Icon = study.icon;
-            const isClickable = index === 0; // Only first case study is clickable
+            const isClickable = index === 0 || index === 1; // First two case studies are clickable
+            const caseStudyRoute = index === 0 
+              ? 'case-study-khazna-registration' 
+              : index === 1 
+                ? 'case-study-khazna-referral'
+                : '';
             return (
               <motion.div
                 key={study.title}
@@ -143,7 +148,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
                 whileHover={{ y: -8 }}
-                onClick={() => isClickable && onSectionChange('case-study-khazna-registration')}
+                onClick={() => isClickable && onSectionChange(caseStudyRoute)}
               >
                 <Card className={`p-8 h-full bg-card border-border hover:border-primary transition-colors group ${isClickable ? 'cursor-pointer' : ''}`}>
                   <div className="flex items-start gap-4 mb-4">
