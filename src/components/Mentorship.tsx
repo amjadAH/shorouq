@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { SunMascot } from './SunMascot';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
+import { Footer } from './Footer';
 
 export function Mentorship() {
   const highlights = [
@@ -103,6 +104,7 @@ export function Mentorship() {
           </Card>
         </motion.div>
       </section>
+      <Footer />
     </div>
   );
 }

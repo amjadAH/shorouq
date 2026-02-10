@@ -1,5 +1,8 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Users, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
+import { Footer } from './Footer';
+import ResearchStrategyContainer from '../imports/Container-131-1986';
+import FinalDesignsSection from '../imports/Section-132-2082';
 
 interface CaseStudyKhaznaReferralProps {
   onBack: () => void;
@@ -285,6 +288,9 @@ export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps
               </div>
             </div>
           </div>
+
+          {/* Research Strategy subsection */}
+          <ResearchStrategyContainer />
         </motion.div>
       </section>
 
@@ -516,42 +522,48 @@ export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <motion.div 
-                className="flex flex-col gap-4 p-8 rounded-lg bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]"
+                className="flex flex-col gap-3 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <p className="text-lg text-[#d0d0d0] leading-relaxed">
-                  Referral entry point visibility.
+                <span className="text-sm text-[#808080] uppercase tracking-wider">Visibility</span>
+                <p className="text-base text-[#d0d0d0] leading-relaxed">
+                  Clear tracking of referral status and reward progress
                 </p>
               </motion.div>
               
               <motion.div 
-                className="flex flex-col gap-4 p-8 rounded-lg bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]"
+                className="flex flex-col gap-3 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <p className="text-lg text-[#d0d0d0] leading-relaxed">
-                  Clear incentive explanation.
+                <span className="text-sm text-[#808080] uppercase tracking-wider">Clarity</span>
+                <p className="text-base text-[#d0d0d0] leading-relaxed">
+                  Transparent explanation of how incentives are earned
                 </p>
               </motion.div>
               
               <motion.div 
-                className="flex flex-col gap-4 p-8 rounded-lg bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]"
+                className="flex flex-col gap-3 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <p className="text-lg text-[#d0d0d0] leading-relaxed">
-                  Transparent referral status tracking.
+                <span className="text-sm text-[#808080] uppercase tracking-wider">Trust</span>
+                <p className="text-base text-[#d0d0d0] leading-relaxed">
+                  Honest communication about activation dependencies
                 </p>
               </motion.div>
             </div>
           </div>
+
+          {/* Final Designs Section */}
+          <FinalDesignsSection />
         </motion.div>
       </section>
 
@@ -597,6 +609,9 @@ export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps
           <span className="text-sm text-[#808080]">Next Case Study →</span>
         </motion.div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

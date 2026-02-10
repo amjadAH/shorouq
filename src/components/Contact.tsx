@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { SunMascot } from './SunMascot';
 import { Button } from './ui/button';
+import { Footer } from './Footer';
 
 export function Contact() {
   const contactLinks = [
@@ -113,6 +114,7 @@ export function Contact() {
           </div>
         </motion.div>
       </section>
+      <Footer />
     </div>
   );
 }

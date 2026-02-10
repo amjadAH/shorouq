@@ -8,7 +8,6 @@ interface NavigationProps {
 export function Navigation({ activeSection, onSectionChange }: NavigationProps) {
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'case-studies', label: 'Sun Stories' },
     { id: 'about', label: 'About Me' },
     { id: 'mentorship', label: 'Helping Others Shine' },
     { id: 'contact', label: 'Contact' }

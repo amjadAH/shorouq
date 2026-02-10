@@ -1,5 +1,10 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Clock, Users, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Footer } from './Footer';
+import Container from '../imports/Container';
+import MobileContainer from '../imports/Container-125-52';
 
 interface CaseStudyKhaznaRegistrationProps {
   onBack: () => void;
@@ -506,6 +511,30 @@ export function CaseStudyKhaznaRegistration({ onBack }: CaseStudyKhaznaRegistrat
         </motion.div>
       </section>
 
+      {/* Screens Section */}
+      <section className="max-w-7xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-16"
+        >
+          {/* Language note */}
+          <div className="flex flex-col gap-4 p-6 rounded-lg bg-[rgba(255,159,122,0.03)] border-l-4 border-[#ff9f7a]">
+            <p className="text-base text-[#b5b5b5] leading-relaxed">
+              Screens are shown in Arabic as the product serves a local market. Design decisions focus on hierarchy, flow, and system feedback.
+            </p>
+          </div>
+
+          {/* Desktop Experience */}
+          <Container />
+
+          {/* Mobile-first Experience */}
+          <MobileContainer />
+        </motion.div>
+      </section>
+
       {/* Reflection */}
       <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
         <motion.div
@@ -547,6 +576,11 @@ export function CaseStudyKhaznaRegistration({ onBack }: CaseStudyKhaznaRegistrat
 
           <span className="text-sm text-[#808080]">Next Case Study →</span>
         </motion.div>
+      </section>
+
+      {/* Footer */}
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-[rgba(255,159,122,0.1)]">
+        <Footer />
       </section>
     </div>
   );
