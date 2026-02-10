@@ -1,8 +1,9 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Calendar, TrendingDown, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
+import { ArrowLeft, Users, Calendar, TrendingUp, CheckCircle } from 'lucide-react@0.487.0';
 import { Footer } from './Footer';
 import ResearchStrategySection from '../imports/Container-149-2988';
-import DesktopExperienceSection from '../imports/Section-149-3017';
+import imgDesktopExperience from 'figma:asset/d60eea4fc3b7888b1d377891a75c604bca0db602.png';
 
 interface CaseStudySimpliaHotdeskProps {
   onBack: () => void;
@@ -99,7 +100,7 @@ export function CaseStudySimpliaHotdesk({ onBack }: CaseStudySimpliaHotdeskProps
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <div className="flex flex-col gap-3 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]">
-              <AlertCircle className="w-8 h-8 text-[#ff9f7a]" />
+              <Users className="w-8 h-8 text-[#ff9f7a]" />
               <span className="text-sm text-[#808080] uppercase tracking-wider">Challenge</span>
               <p className="text-base text-[#d0d0d0] leading-relaxed">
                 Users dropped off before completing bookings, resulting in lost revenue
@@ -107,7 +108,7 @@ export function CaseStudySimpliaHotdesk({ onBack }: CaseStudySimpliaHotdeskProps
             </div>
             
             <div className="flex flex-col gap-3 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]">
-              <TrendingDown className="w-8 h-8 text-[#ff9f7a]" />
+              <TrendingUp className="w-8 h-8 text-[#ff9f7a]" />
               <span className="text-sm text-[#808080] uppercase tracking-wider">Core Issue</span>
               <p className="text-base text-[#d0d0d0] leading-relaxed">
                 Fragmented funnel with unclear steps and poor information hierarchy
@@ -566,9 +567,13 @@ export function CaseStudySimpliaHotdesk({ onBack }: CaseStudySimpliaHotdeskProps
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-8 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)] flex items-center justify-center min-h-[400px]"
+              className="mt-8 rounded-xl overflow-hidden"
             >
-              <DesktopExperienceSection />
+              <img 
+                src={imgDesktopExperience} 
+                alt="Hotdesk booking funnel screens showing the complete user journey from workspace discovery to booking confirmation" 
+                className="w-full h-auto"
+              />
             </motion.div>
           </div>
         </motion.div>
