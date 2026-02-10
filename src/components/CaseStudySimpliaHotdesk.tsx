@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Calendar, TrendingDown, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
 import { Footer } from './Footer';
-import FinalDesignsSimpliaSection from '../imports/Container-136-94';
+import ResearchStrategySection from '../imports/Container-149-2988';
+import DesktopExperienceSection from '../imports/Section-149-3017';
 
 interface CaseStudySimpliaHotdeskProps {
   onBack: () => void;
@@ -280,6 +281,17 @@ export function CaseStudySimpliaHotdesk({ onBack }: CaseStudySimpliaHotdeskProps
                 </motion.div>
               </div>
             </div>
+
+            {/* Research Strategy Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-8"
+            >
+              <ResearchStrategySection />
+            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -556,7 +568,7 @@ export function CaseStudySimpliaHotdesk({ onBack }: CaseStudySimpliaHotdeskProps
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-8 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)] flex items-center justify-center min-h-[400px]"
             >
-              <FinalDesignsSimpliaSection />
+              <DesktopExperienceSection />
             </motion.div>
           </div>
         </motion.div>

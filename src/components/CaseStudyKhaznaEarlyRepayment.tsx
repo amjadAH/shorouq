@@ -2,7 +2,9 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
 import { Footer } from './Footer';
-import FinalDesignsKhaznaEarlyRepayment from '../imports/Container-138-568';
+import ResearchStrategySection from '../imports/Container-149-3085';
+import UserFlowSection from '../imports/Container-149-3099';
+import MobileExperienceSection from '../imports/Container-149-3151';
 
 interface CaseStudyKhaznaEarlyRepaymentProps {
   onBack: () => void;
@@ -179,6 +181,17 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
             <p className="text-xl text-[#b5b5b5] leading-relaxed">
               The goal wasn't to push users toward early repayment, but to create an experience where they could understand their options, see the financial impact clearly, and feel supported in whatever choice they made. The design needed to build trust through clarity, not conversion through persuasion.
             </p>
+
+            {/* Research Strategy Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-8"
+            >
+              <ResearchStrategySection />
+            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -239,6 +252,17 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
             <p className="text-xl text-[#b5b5b5] leading-relaxed">
               Visual and cognitive clutter were reduced during the decision moment, allowing users to focus on the information that mattered most. The tone shifted from transactional to supportive, reinforcing that this was a choice made in their best interest, not a pressure point designed to drive behavior.
             </p>
+
+            {/* User Flow Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-8"
+            >
+              <UserFlowSection />
+            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -406,7 +430,7 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-8"
             >
-              <FinalDesignsKhaznaEarlyRepayment />
+              <MobileExperienceSection />
             </motion.div>
           </div>
         </motion.div>
