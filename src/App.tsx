@@ -47,6 +47,11 @@ export default function App() {
       <main>
         {renderSection()}
       </main>
+      
+      {/* Floating "Made with Figma Make" Tag */}
+      <div className="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-full bg-[#1a1a1a] border border-[rgba(255,255,255,0.1)] backdrop-blur-sm shadow-lg">
+        <p className="text-sm text-[#808080]">Made with Figma Make</p>
+      </div>
     </div>
   );
 }
