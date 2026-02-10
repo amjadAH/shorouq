@@ -4,7 +4,7 @@ import { ArrowLeft, DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'luc
 import { Footer } from './Footer';
 import ResearchStrategySection from '../imports/Container-149-3085';
 import UserFlowSection from '../imports/Container-149-3099';
-import imgMobileExperience from 'figma:asset/108c0d42510e0047db6dbe64df77b1ac74eacba0.png';
+import MobileExperienceSection from '../imports/Container-149-3704';
 
 interface CaseStudyKhaznaEarlyRepaymentProps {
   onBack: () => void;
@@ -428,13 +428,9 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-8 rounded-xl overflow-hidden"
+              className="mt-8"
             >
-              <img 
-                src={imgMobileExperience} 
-                alt="Complete mobile early repayment flow showing all screens from entry point to confirmation" 
-                className="w-full h-auto"
-              />
+              <MobileExperienceSection />
             </motion.div>
           </div>
         </motion.div>
