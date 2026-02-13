@@ -1,14 +1,13 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Users, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
-import { Footer } from './Footer';
-import ResearchStrategyContainer from '../imports/Container-131-1986';
-import FinalDesignsSection from '../imports/Section-132-2082';
+import { ArrowLeft, Target, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react@0.487.0';
 
 interface CaseStudyKhaznaReferralProps {
   onBack: () => void;
+  onSectionChange?: (section: string) => void;
 }
 
-export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps) {
+export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKhaznaReferralProps) {
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
@@ -101,7 +100,7 @@ export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <div className="flex flex-col gap-3 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]">
-              <AlertCircle className="w-8 h-8 text-[#ff9f7a]" />
+              <Target className="w-8 h-8 text-[#ff9f7a]" />
               <span className="text-sm text-[#808080] uppercase tracking-wider">Challenge</span>
               <p className="text-base text-[#d0d0d0] leading-relaxed">
                 Users shared codes but rarely received rewards, damaging trust in the program
@@ -288,9 +287,6 @@ export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps
               </div>
             </div>
           </div>
-
-          {/* Research Strategy subsection */}
-          <ResearchStrategyContainer />
         </motion.div>
       </section>
 
@@ -561,9 +557,6 @@ export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps
               </motion.div>
             </div>
           </div>
-
-          {/* Final Designs Section */}
-          <FinalDesignsSection />
         </motion.div>
       </section>
 
@@ -606,12 +599,17 @@ export function CaseStudyKhaznaReferral({ onBack }: CaseStudyKhaznaReferralProps
             <span>Back to Work</span>
           </button>
 
-          <span className="text-sm text-[#808080]">Next Case Study →</span>
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-simplia-hotdesk')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <span>Next Case Study</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          )}
         </motion.div>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

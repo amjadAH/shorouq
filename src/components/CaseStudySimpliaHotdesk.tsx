@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Users, Calendar, TrendingUp, CheckCircle } from 'lucide-react@0.487.0';
+import { ArrowLeft, Users, Calendar, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react@0.487.0';
 import { Footer } from './Footer';
 import ResearchStrategySection from '../imports/Container-149-2988';
 import imgDesktopExperience from 'figma:asset/d60eea4fc3b7888b1d377891a75c604bca0db602.png';
 
 interface CaseStudySimpliaHotdeskProps {
   onBack: () => void;
+  onSectionChange?: (section: string) => void;
 }
 
-export function CaseStudySimpliaHotdesk({ onBack }: CaseStudySimpliaHotdeskProps) {
+export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySimpliaHotdeskProps) {
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
@@ -618,7 +619,15 @@ export function CaseStudySimpliaHotdesk({ onBack }: CaseStudySimpliaHotdeskProps
             <span>Back to Work</span>
           </button>
 
-          <span className="text-sm text-[#808080]">Next Case Study →</span>
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-khazna-early-repayment')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <span>Next Case Study</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          )}
         </motion.div>
       </section>
 

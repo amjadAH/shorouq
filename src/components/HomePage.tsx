@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { ExternalLink, ChevronDown, Mail, Linkedin, ClipboardCheck, Users, Calendar, DollarSign } from 'lucide-react@0.487.0';
+import { ExternalLink, ChevronDown, Mail, Linkedin, ClipboardCheck, Users, Calendar, DollarSign, Network } from 'lucide-react@0.487.0';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { SunMascot } from './SunMascot';
@@ -43,6 +43,11 @@ export function HomePage({ onSectionChange }: HomePageProps) {
       title: 'Khazna  Early Repayment Experience Optimization',
       description: 'Making early repayment decisions clearer and more reassuring through guided UX and better hierarchy.',
       icon: DollarSign
+    },
+    { 
+      title: 'Service-Led Activation Redesign',
+      description: 'Mapping operational bottlenecks to improve registration visibility and reduce support dependency.',
+      icon: Network
     }
   ];
 
@@ -143,7 +148,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {caseStudies.map((study, index) => {
             const Icon = study.icon;
-            const isClickable = index === 0 || index === 1 || index === 2 || index === 3; // All four case studies are clickable
+            const isClickable = index === 0 || index === 1 || index === 2 || index === 3 || index === 4; // All five case studies are clickable
             const caseStudyRoute = index === 0 
               ? 'case-study-khazna-registration' 
               : index === 1 
@@ -152,7 +157,9 @@ export function HomePage({ onSectionChange }: HomePageProps) {
                   ? 'case-study-simplia-hotdesk'
                   : index === 3
                     ? 'case-study-khazna-early-repayment'
-                    : '';
+                    : index === 4
+                      ? 'case-study-service-activation'
+                      : '';
             return (
               <motion.div
                 key={study.title}

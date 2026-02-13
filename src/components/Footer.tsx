@@ -49,6 +49,11 @@ export function Footer() {
               <span>ADPList</span>
             </Button>
           </div>
+
+          {/* Made with Figma Make */}
+          <p className="text-sm text-muted-foreground mt-12">
+            Made with Figma Make ✨
+          </p>
         </motion.div>
       </div>
     </footer>

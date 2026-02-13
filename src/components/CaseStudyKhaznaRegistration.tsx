@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Clock, Users, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
+import { ArrowLeft, Clock, Users, AlertCircle, CheckCircle, ArrowRight } from 'lucide-react@0.487.0';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Footer } from './Footer';
 import Container from '../imports/Container';
@@ -8,9 +8,10 @@ import MobileContainer from '../imports/Container-125-52';
 
 interface CaseStudyKhaznaRegistrationProps {
   onBack: () => void;
+  onSectionChange?: (section: string) => void;
 }
 
-export function CaseStudyKhaznaRegistration({ onBack }: CaseStudyKhaznaRegistrationProps) {
+export function CaseStudyKhaznaRegistration({ onBack, onSectionChange }: CaseStudyKhaznaRegistrationProps) {
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
@@ -574,7 +575,15 @@ export function CaseStudyKhaznaRegistration({ onBack }: CaseStudyKhaznaRegistrat
             <span>Back to Work</span>
           </button>
 
-          <span className="text-sm text-[#808080]">Next Case Study →</span>
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-khazna-referral')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <span>Next Case Study</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          )}
         </motion.div>
       </section>
 

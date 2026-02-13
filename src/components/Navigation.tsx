@@ -12,16 +12,16 @@ export function Navigation({ activeSection, onSectionChange }: NavigationProps) 
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About Me' },
     { id: 'mentorship', label: 'Helping Others Shine' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'about', label: 'About Me' }
   ];
 
   const caseStudies = [
     { id: 'case-study-khazna-registration', label: 'Khazna — On-ground Registration' },
     { id: 'case-study-khazna-referral', label: 'Khazna — Referral Program' },
     { id: 'case-study-simplia-hotdesk', label: 'Simplia — Hotdesk Booking' },
-    { id: 'case-study-khazna-early-repayment', label: 'Khazna — Early Repayment' }
+    { id: 'case-study-khazna-early-repayment', label: 'Khazna — Early Repayment' },
+    { id: 'case-study-service-activation', label: 'Service-Led Activation Redesign' }
   ];
 
   const isMyWorkActive = activeSection.startsWith('case-study');
@@ -39,6 +39,27 @@ export function Navigation({ activeSection, onSectionChange }: NavigationProps) 
           </motion.div>
           
           <div className="hidden md:flex items-center space-x-8">
+            {/* Home */}
+            <motion.button
+              onClick={() => onSectionChange('home')}
+              className={`relative px-4 py-2 transition-colors ${
+                activeSection === 'home' 
+                  ? 'text-primary' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+              whileHover={{ y: -2 }}
+              whileTap={{ y: 0 }}
+            >
+              Home
+              {activeSection === 'home' && (
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                  layoutId="activeTab"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+            </motion.button>
+
             {/* My Work Dropdown */}
             <div 
               className="relative"
@@ -120,29 +141,47 @@ export function Navigation({ activeSection, onSectionChange }: NavigationProps) 
               )}
             </motion.button>
 
-            {/* Other Nav Items */}
-            {navItems.map((item) => (
-              <motion.button
-                key={item.id}
-                onClick={() => onSectionChange(item.id)}
-                className={`relative px-4 py-2 transition-colors ${
-                  activeSection === item.id 
-                    ? 'text-primary' 
-                    : 'text-foreground hover:text-primary'
-                }`}
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
-              >
-                {item.label}
-                {activeSection === item.id && (
-                  <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
-                    layoutId="activeTab"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-              </motion.button>
-            ))}
+            {/* Helping Others Shine */}
+            <motion.button
+              onClick={() => onSectionChange('mentorship')}
+              className={`relative px-4 py-2 transition-colors ${
+                activeSection === 'mentorship' 
+                  ? 'text-primary' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+              whileHover={{ y: -2 }}
+              whileTap={{ y: 0 }}
+            >
+              Helping Others Shine
+              {activeSection === 'mentorship' && (
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                  layoutId="activeTab"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+            </motion.button>
+
+            {/* About Me */}
+            <motion.button
+              onClick={() => onSectionChange('about')}
+              className={`relative px-4 py-2 transition-colors ${
+                activeSection === 'about' 
+                  ? 'text-primary' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+              whileHover={{ y: -2 }}
+              whileTap={{ y: 0 }}
+            >
+              About Me
+              {activeSection === 'about' && (
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                  layoutId="activeTab"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+            </motion.button>
           </div>
 
           {/* Mobile menu button */}

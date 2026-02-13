@@ -1,16 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react@0.487.0';
-import { Footer } from './Footer';
-import ResearchStrategySection from '../imports/Container-149-3085';
-import UserFlowSection from '../imports/Container-149-3099';
-import MobileExperienceSection from '../imports/Container-149-3704';
+import { ArrowLeft, DollarSign, Calendar, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react@0.487.0';
 
 interface CaseStudyKhaznaEarlyRepaymentProps {
   onBack: () => void;
+  onSectionChange?: (section: string) => void;
 }
 
-export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRepaymentProps) {
+export function CaseStudyKhaznaEarlyRepayment({ onBack, onSectionChange }: CaseStudyKhaznaEarlyRepaymentProps) {
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
@@ -103,7 +100,7 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
             transition={{ duration: 0.6, delay: 0.7 }}
           >
             <div className="flex flex-col gap-3 p-8 rounded-xl bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]">
-              <AlertCircle className="w-8 h-8 text-[#ff9f7a]" />
+              <Calendar className="w-8 h-8 text-[#ff9f7a]" />
               <span className="text-sm text-[#808080] uppercase tracking-wider">Challenge</span>
               <p className="text-base text-[#d0d0d0] leading-relaxed">
                 Users hesitated to complete early repayment due to confusion about financial impact
@@ -181,17 +178,6 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
             <p className="text-xl text-[#b5b5b5] leading-relaxed">
               The goal wasn't to push users toward early repayment, but to create an experience where they could understand their options, see the financial impact clearly, and feel supported in whatever choice they made. The design needed to build trust through clarity, not conversion through persuasion.
             </p>
-
-            {/* Research Strategy Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-8"
-            >
-              <ResearchStrategySection />
-            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -252,17 +238,6 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
             <p className="text-xl text-[#b5b5b5] leading-relaxed">
               Visual and cognitive clutter were reduced during the decision moment, allowing users to focus on the information that mattered most. The tone shifted from transactional to supportive, reinforcing that this was a choice made in their best interest, not a pressure point designed to drive behavior.
             </p>
-
-            {/* User Flow Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-8"
-            >
-              <UserFlowSection />
-            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -421,17 +396,6 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
                 </p>
               </motion.div>
             </div>
-
-            {/* Final Designs Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="mt-8"
-            >
-              <MobileExperienceSection />
-            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -478,13 +442,16 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack }: CaseStudyKhaznaEarlyRe
             <span>Back to Work</span>
           </button>
 
-          <span className="text-sm text-[#808080]">Next Case Study →</span>
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-khazna-registration')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <span>Next Case Study</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          )}
         </motion.div>
-      </section>
-
-      {/* Footer */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-[rgba(255,159,122,0.1)]">
-        <Footer />
       </section>
     </div>
   );
