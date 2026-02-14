@@ -10,9 +10,9 @@ interface CaseStudyServiceActivationProps {
 
 export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStudyServiceActivationProps) {
   return (
-    <div className="min-h-screen pt-20 pb-12 bg-background">
+    <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
-      <section className="px-6 pt-8">
+      <section className="px-14 pt-8">
         <motion.button
           onClick={onBack}
           className="inline-flex items-center gap-2 text-[#a0a0a0] hover:text-[#ff9f7a] transition-colors group"
@@ -27,7 +27,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Hero Section */}
-      <section className="px-6 py-14">
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -44,8 +44,8 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
         </motion.div>
       </section>
 
-      {/* Context Section */}
-      <section className="px-6 py-14">
+      {/* Identify */}
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,8 +92,8 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
         </motion.div>
       </section>
 
-      {/* The Investigation Section */}
-      <section className="px-6 py-14">
+      {/* Define */}
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,8 +133,8 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
         </motion.div>
       </section>
 
-      {/* Service Blueprint Visual Section */}
-      <section className="px-6 py-14">
+      {/* Explore */}
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -156,8 +156,8 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
         </motion.div>
       </section>
 
-      {/* Key Breakpoints Section */}
-      <section className="px-6 py-14">
+      {/* Act */}
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -195,8 +195,8 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
         </motion.div>
       </section>
 
-      {/* Design Recommendations Section */}
-      <section className="px-6 py-14">
+      {/* Learn */}
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -229,8 +229,8 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
         </motion.div>
       </section>
 
-      {/* Outcome Section */}
-      <section className="px-6 py-14">
+      {/* Impact */}
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -269,8 +269,96 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
         </motion.div>
       </section>
 
+      {/* Final Designs */}
+      <section className="px-14 py-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-8"
+        >
+          <h2 className="text-[32px] text-[#f8f8f2]">Final Designs</h2>
+          
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
+              The final designs included:
+            </p>
+            
+            <ul className="flex flex-col gap-3 pl-6">
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Automated reminders for HR approvals
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Consistent status updates across systems
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Simplified backend dependency chains
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Clear visibility for users during pending states
+              </li>
+            </ul>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Screens Section */}
+      <section className="px-14 py-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-8"
+        >
+          <h2 className="text-[32px] text-[#f8f8f2]">Screens</h2>
+          
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
+              The final screens included:
+            </p>
+            
+            <ul className="flex flex-col gap-3 pl-6">
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                User registration screen
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Activation status screen
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                HR approval reminder screen
+              </li>
+            </ul>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Reflection */}
+      <section className="px-14 py-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-8"
+        >
+          <h2 className="text-[32px] text-[#f8f8f2]">Reflection</h2>
+          
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
+              This project highlighted the importance of mapping out the entire user journey and identifying operational bottlenecks.
+            </p>
+            
+            <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
+              By addressing these bottlenecks, we were able to significantly improve the user experience and reduce support dependency.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Navigation */}
-      <section className="px-6 py-14">
+      <section className="px-14 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -301,7 +389,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Footer */}
-      <section className="px-6 py-14">
+      <section className="px-14 py-14">
         <Footer />
       </section>
     </div>
