@@ -98,7 +98,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
   return (
     <div className="min-h-screen pt-20 pb-12 bg-background">
       {/* Back Button */}
-      <section className="max-w-5xl mx-auto px-6 pt-8">
+      <section className="max-w-6xl mx-auto px-6 pt-8">
         <motion.button
           onClick={onBack}
           className="inline-flex items-center gap-2 text-[#a0a0a0] hover:text-[#ff9f7a] transition-colors group"
@@ -113,7 +113,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       </section>
 
       {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-6 py-14 min-h-[60vh] flex items-center">
+      <section className="max-w-6xl mx-auto px-6 py-14 min-h-[60vh] flex items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       </section>
 
       {/* What I Worked On */}
-      <section className="max-w-5xl mx-auto px-6 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -222,7 +222,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       </section>
 
       {/* How This Shows Up - Redesigned as metric cards */}
-      <section className="max-w-5xl mx-auto px-6 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -259,7 +259,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       </section>
 
       {/* System Impact Numbers */}
-      <section className="max-w-5xl mx-auto px-6 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -320,7 +320,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       </section>
 
       {/* My Approach to Systems */}
-      <section className="max-w-5xl mx-auto px-6 py-14 min-h-[60vh] flex items-center">
+      <section className="max-w-6xl mx-auto px-6 py-14 min-h-[60vh] flex items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -339,7 +339,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       </section>
 
       {/* Closing CTA */}
-      <section className="max-w-5xl mx-auto px-6 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -14,7 +14,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
-      <section className="px-14 pt-8">
+      <section className="max-w-6xl mx-auto px-6 pt-8">
         <motion.button
           onClick={onBack}
           className="inline-flex items-center gap-2 text-[#a0a0a0] hover:text-[#ff9f7a] transition-colors group"
@@ -29,7 +29,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Hero Section */}
-      <section className="px-14 py-14 relative">
+      <section className="max-w-6xl mx-auto px-6 py-14 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Identify */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -209,7 +209,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Define */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -284,7 +284,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Explore */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -314,7 +314,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Act */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -398,7 +398,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Learn */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -423,7 +423,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Impact */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -493,7 +493,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Final Designs */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -554,7 +554,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Screens Section */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -566,7 +566,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Reflection */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -588,7 +588,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Navigation */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

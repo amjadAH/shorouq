@@ -12,7 +12,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
-      <section className="px-14 pt-8">
+      <section className="max-w-6xl mx-auto px-6 pt-8">
         <motion.button
           onClick={onBack}
           className="inline-flex items-center gap-2 text-[#a0a0a0] hover:text-[#ff9f7a] transition-colors group"
@@ -27,7 +27,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Hero Section */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Identify */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Define */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Explore */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Act */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Learn */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -230,7 +230,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Impact */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -270,7 +270,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Final Designs */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -304,7 +304,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Screens Section */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -335,7 +335,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Reflection */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -358,7 +358,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Navigation */}
-      <section className="px-14 py-14">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -389,7 +389,7 @@ export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStud
       </section>
 
       {/* Footer */}
-      <section className="px-14 py-14">
+      <section className="px-6 py-14">
         <Footer />
       </section>
     </div>

@@ -13,28 +13,33 @@ import { SystemsFoundations } from './components/SystemsFoundations';
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
 
+  const handleSectionChange = (section: string) => {
+    setActiveSection(section);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const renderSection = () => {
     switch (activeSection) {
       case 'home':
-        return <HomePage onSectionChange={setActiveSection} />;
+        return <HomePage onSectionChange={handleSectionChange} />;
       case 'case-study-khazna-registration':
-        return <CaseStudyKhaznaRegistration onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
+        return <CaseStudyKhaznaRegistration onBack={() => handleSectionChange('home')} onSectionChange={handleSectionChange} />;
       case 'case-study-khazna-referral':
-        return <CaseStudyKhaznaReferral onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
+        return <CaseStudyKhaznaReferral onBack={() => handleSectionChange('home')} onSectionChange={handleSectionChange} />;
       case 'case-study-simplia-hotdesk':
-        return <CaseStudySimpliaHotdesk onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
+        return <CaseStudySimpliaHotdesk onBack={() => handleSectionChange('home')} onSectionChange={handleSectionChange} />;
       case 'case-study-khazna-early-repayment':
-        return <CaseStudyKhaznaEarlyRepayment onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
+        return <CaseStudyKhaznaEarlyRepayment onBack={() => handleSectionChange('home')} onSectionChange={handleSectionChange} />;
       case 'case-study-service-activation':
-        return <CaseStudyServiceActivation onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
+        return <CaseStudyServiceActivation onBack={() => handleSectionChange('home')} onSectionChange={handleSectionChange} />;
       case 'systems':
-        return <SystemsFoundations onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
+        return <SystemsFoundations onBack={() => handleSectionChange('home')} onSectionChange={handleSectionChange} />;
       case 'about':
         return <AboutMe />;
       case 'mentorship':
         return <Mentorship />;
       default:
-        return <HomePage onSectionChange={setActiveSection} />;
+        return <HomePage onSectionChange={handleSectionChange} />;
     }
   };
 
@@ -42,7 +47,7 @@ export default function App() {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation 
         activeSection={activeSection} 
-        onSectionChange={setActiveSection} 
+        onSectionChange={handleSectionChange} 
       />
       <main>
         {renderSection()}
