@@ -259,7 +259,6 @@ function Button({ onClick }: { onClick?: () => void }) {
 export default function Section({ onButtonClick }: { onButtonClick?: () => void }) {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start px-[24px] py-[56px] relative size-full" data-name="Section">
-      <div aria-hidden="true" className="absolute border-[rgba(255,159,122,0.1)] border-solid border-t inset-0 pointer-events-none" />
       <Container />
       <Container1 />
       <Button onClick={onButtonClick} />

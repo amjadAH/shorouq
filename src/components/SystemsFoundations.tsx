@@ -21,8 +21,8 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       impact: 'Reduced design-to-dev handoff questions by 40%',
       snapshots: [
         {
-          url: 'https://images.unsplash.com/photo-1729992530956-912936b9785d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBzeXN0ZW0lMjBjb2xvciUyMHBhbGV0dGUlMjBncmlkfGVufDF8fHx8MTc3MDgxNjA3OXww&ixlib=rb-4.1.0&q=80&w=1080',
-          caption: 'Standardized spacing scale across 10+ flows'
+          url: 'figma:asset/4e0cfe48646d8e7a5e8e4617ff2b6485a4dd697b.png',
+          caption: 'Comprehensive design system foundations'
         }
       ]
     },
@@ -37,8 +37,8 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       impact: 'Supported 6 product squads with shared foundations',
       snapshots: [
         {
-          url: 'https://images.unsplash.com/photo-1691440599496-4ae4378799eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjB0b2tlbnMlMjB0eXBvZ3JhcGh5JTIwc3BhY2luZ3xlbnwxfHx8fDE3NzA4MTYwNzl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-          caption: 'Token structure enabling consistent decisions'
+          url: 'figma:asset/d8692490d4679a4085f2be6843e6c649db1e3241.png',
+          caption: 'Semantic color system with functional roles'
         }
       ]
     },
@@ -53,8 +53,8 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       impact: 'Deployed across 15+ product flows',
       snapshots: [
         {
-          url: 'https://images.unsplash.com/photo-1721046013656-0a0980264689?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wb25lbnQlMjBsaWJyYXJ5JTIwdWklMjBlbGVtZW50c3xlbnwxfHx8fDE3NzA4MTYwODB8MA&ixlib=rb-4.1.0&q=80&w=1080',
-          caption: 'Component library with standardized variants'
+          url: 'figma:asset/408d9881cf6c3266afbac7796a55cbac738b29ec.png',
+          caption: 'Component variants with complete state coverage'
         }
       ]
     },
@@ -69,7 +69,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       impact: 'Improved handoff clarity across 4 product teams',
       snapshots: [
         {
-          url: 'https://images.unsplash.com/photo-1646579886741-12b59840c63f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMGRlc2lnbiUyMGVuZ2luZWVyaW5nfGVufDF8fHx8MTc3MDgxNjA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
+          url: 'figma:asset/f2df04dc6bb9bde5ac8c82fe6a30875ea163670c.png',
           caption: 'Cross-functional collaboration in practice'
         }
       ]
@@ -113,34 +113,25 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
       </section>
 
       {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-14 min-h-[60vh] flex items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-6"
         >
           <h1 className="text-[56px] lg:text-[64px] text-[#f8f8f2] leading-tight">
-            Systems & Foundations
+            Design Systems & Product Foundations
           </h1>
           
-          <p className="text-[20px] text-[#b5b5b5] leading-relaxed max-w-2xl">
-            Designing foundations that help teams build faster and stay aligned.
-          </p>
-
-          <p className="text-[17px] text-[#8a8a8a] leading-relaxed max-w-2xl">
-            Systems work doesn't happen in isolation. It evolves alongside product delivery—adapting to real constraints and making space for both consistency and flexibility.
+          <p className="text-[20px] text-[#b5b5b5] leading-relaxed max-w-3xl">
+            Building scalable foundations that help teams ship faster and stay aligned. This work evolves alongside product delivery—adapting to real constraints while creating shared language and consistent patterns across multiple squads.
           </p>
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* What I Worked On */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -230,13 +221,8 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* How This Shows Up - Redesigned as metric cards */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -272,13 +258,8 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* System Impact Numbers */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -286,7 +267,7 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-12"
         >
-          <h2 className="text-[40px] text-[#f8f8f2] font-bold text-center">System Impact</h2>
+          <h2 className="text-[40px] text-[#f8f8f2] font-bold text-center">Design Systems Impact</h2>
           
           {/* Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -338,13 +319,8 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* My Approach to Systems */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-14 min-h-[60vh] flex items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -354,29 +330,16 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
         >
           <h2 className="text-[40px] text-[#f8f8f2] font-bold">My Approach</h2>
           
-          <div className="flex flex-col gap-6 max-w-2xl">
+          <div className="flex flex-col gap-6 max-w-3xl">
             <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
-              Systems evolve alongside the product—starting small, proving value, and growing as real needs emerge.
-            </p>
-            
-            <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
-              Foundations are built incrementally. A spacing rule becomes useful when it solves actual inconsistency. A component becomes reusable after it's been tested in multiple contexts.
-            </p>
-            
-            <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
-              Good systems work is invisible. The best outcome is when teams can build faster without thinking about the foundation at all.
+              Systems evolve alongside products—starting small, proving value through real usage, and growing as needs emerge. Foundations are built incrementally: a spacing rule becomes useful when it solves actual inconsistency; a component becomes reusable after it's been tested across contexts. The best systems work is invisible—teams should ship faster without thinking about the foundation.
             </p>
           </div>
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* Closing CTA */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
+      <section className="max-w-5xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -385,7 +348,15 @@ export function SystemsFoundations({ onBack, onSectionChange }: SystemsFoundatio
           className="flex flex-col items-start gap-6"
         >
           <button
-            onClick={() => onSectionChange('home')}
+            onClick={() => {
+              onSectionChange('home');
+              setTimeout(() => {
+                const workSection = document.getElementById('selected-work');
+                if (workSection) {
+                  workSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }, 100);
+            }}
             className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
           >
             <span className="text-[17px]">View Case Studies</span>

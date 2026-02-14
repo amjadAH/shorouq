@@ -51,10 +51,17 @@ export function HomePage({ onSectionChange }: HomePageProps) {
     }
   ];
 
+  const scrollToWork = () => {
+    const workSection = document.getElementById('selected-work');
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <motion.div 
             className="flex-1 text-center lg:text-left"
@@ -76,7 +83,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
               <Button 
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
-                onClick={() => onSectionChange('case-studies')}
+                onClick={scrollToWork}
               >
                 View My Work
               </Button>
@@ -102,7 +109,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
       </section>
 
       {/* Companies Row */}
-      <section className="max-w-6xl mx-auto px-6 py-12">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div 
           className="text-center mb-8"
           initial={{ opacity: 0 }}
@@ -134,7 +141,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
       </section>
 
       {/* Case Study Previews */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section id="selected-work" className="max-w-6xl mx-auto px-6 py-14">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -170,7 +177,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
                 onClick={() => isClickable && onSectionChange(caseStudyRoute)}
               >
                 <Card className={`p-8 h-full bg-card border-border hover:border-primary transition-colors group ${isClickable ? 'cursor-pointer' : ''}`}>
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="flex items-start gap-4 mb-2">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
@@ -187,18 +194,13 @@ export function HomePage({ onSectionChange }: HomePageProps) {
       </section>
 
       {/* Systems & Foundations Preview */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.8 }}
         >
-          <div className="flex flex-col gap-16 px-0 py-20 relative border-t border-[rgba(255,159,122,0.1)]">
-            {/* Background glow */}
-            <div className="absolute inset-0 pointer-events-none" style={{
-              backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(255,159,122,0.05) 0%, transparent 50%)'
-            }} />
-            
+          <div className="flex flex-col gap-16 px-0 py-14 relative">
             {/* Header */}
             <div className="flex flex-col gap-4 items-center w-full relative z-10">
               <h2 className="text-4xl text-[#f8f8f2]">Design Systems & Product Foundations</h2>
@@ -212,12 +214,10 @@ export function HomePage({ onSectionChange }: HomePageProps) {
               
               {/* Highlighted Core System Work - Full Width */}
               <motion.div 
-                className="relative group"
-                whileHover={{ y: -4 }}
+                className="relative"
                 transition={{ duration: 0.3 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[rgba(255,159,122,0.1)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl blur-xl" />
-                <div className="relative bg-gradient-to-br from-[rgba(255,159,122,0.08)] to-[rgba(255,159,122,0.02)] rounded-xl border border-[rgba(255,159,122,0.2)] p-8 md:p-10 hover:border-[rgba(255,159,122,0.3)] transition-all duration-300">
+                <div className="relative bg-[rgba(255,159,122,0.03)] rounded-xl border border-[rgba(255,159,122,0.1)] p-8 md:p-10">
                   <div className="flex flex-col gap-4 items-center text-center">
                     <h3 className="text-2xl text-[#f8f8f2]">Scalable Design Systems</h3>
                     <p className="text-lg text-[#a0a0a0] leading-relaxed max-w-4xl">
@@ -233,12 +233,11 @@ export function HomePage({ onSectionChange }: HomePageProps) {
                 {/* Design Tokens & Governance */}
                 <motion.div 
                   className="group"
-                  whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="h-full bg-[rgba(255,159,122,0.03)] rounded-lg border border-[rgba(255,159,122,0.1)] p-6 hover:bg-[rgba(255,159,122,0.05)] hover:border-[rgba(255,159,122,0.15)] transition-all duration-300">
+                  <div className="h-full bg-[rgba(255,159,122,0.03)] rounded-lg border border-[rgba(255,159,122,0.1)] p-6">
                     <div className="flex flex-col gap-3 h-full">
-                      <h3 className="text-xl text-[#f8f8f2] group-hover:text-primary transition-colors">
+                      <h3 className="text-xl text-[#f8f8f2]">
                         Design Tokens & Governance
                       </h3>
                       <p className="text-base text-[#a0a0a0] leading-relaxed">
@@ -251,12 +250,11 @@ export function HomePage({ onSectionChange }: HomePageProps) {
                 {/* Cross-Functional Collaboration */}
                 <motion.div 
                   className="group"
-                  whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="h-full bg-[rgba(255,159,122,0.03)] rounded-lg border border-[rgba(255,159,122,0.1)] p-6 hover:bg-[rgba(255,159,122,0.05)] hover:border-[rgba(255,159,122,0.15)] transition-all duration-300">
+                  <div className="h-full bg-[rgba(255,159,122,0.03)] rounded-lg border border-[rgba(255,159,122,0.1)] p-6">
                     <div className="flex flex-col gap-3 h-full">
-                      <h3 className="text-xl text-[#f8f8f2] group-hover:text-primary transition-colors">
+                      <h3 className="text-xl text-[#f8f8f2]">
                         Cross-Functional Collaboration
                       </h3>
                       <p className="text-base text-[#a0a0a0] leading-relaxed">
@@ -269,12 +267,11 @@ export function HomePage({ onSectionChange }: HomePageProps) {
                 {/* Documentation & Adoption */}
                 <motion.div 
                   className="group"
-                  whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="h-full bg-[rgba(255,159,122,0.03)] rounded-lg border border-[rgba(255,159,122,0.1)] p-6 hover:bg-[rgba(255,159,122,0.05)] hover:border-[rgba(255,159,122,0.15)] transition-all duration-300">
+                  <div className="h-full bg-[rgba(255,159,122,0.03)] rounded-lg border border-[rgba(255,159,122,0.1)] p-6">
                     <div className="flex flex-col gap-3 h-full">
-                      <h3 className="text-xl text-[#f8f8f2] group-hover:text-primary transition-colors">
+                      <h3 className="text-xl text-[#f8f8f2]">
                         Documentation & Adoption
                       </h3>
                       <p className="text-base text-[#a0a0a0] leading-relaxed">
@@ -287,7 +284,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
               </div>
               
               {/* Metrics Strip */}
-              <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 pt-8 border-t border-[rgba(255,159,122,0.08)]">
+              <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 pt-8">
                 <div className="flex flex-col items-center gap-1">
                   <p className="text-sm text-[#6b6b6b] uppercase tracking-wider">Impact</p>
                   <p className="text-base text-[#a0a0a0]">Used across 15+ product flows</p>
@@ -325,7 +322,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
       </section>
 
       {/* Leadership & Mentorship Preview */}
-      <section className="max-w-6xl mx-auto py-20">
+      <section className="max-w-6xl mx-auto py-14">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -337,12 +334,11 @@ export function HomePage({ onSectionChange }: HomePageProps) {
       </section>
 
       {/* About Preview Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.2 }}
-          className="border-t border-border pt-20"
         >
           <div className="flex flex-col items-center text-center gap-8">
             {/* Profile Image */}
@@ -359,10 +355,7 @@ export function HomePage({ onSectionChange }: HomePageProps) {
             <div className="flex flex-col items-center gap-6">
               <h2 className="text-4xl text-foreground">About</h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                I'm a problem-solver who happens to work in product design. My approach is grounded in understanding real-world constraints, user needs, and business goals — then crafting experiences that bring clarity to complexity.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                I've spent my career designing for fintech, education, and enterprise products where the stakes are high and the problems are messy. I believe thoughtful design can make hard things easier, build trust, and create real impact.
+                I'm a Senior Product Designer focused on bringing clarity to complex problems. My work spans fintech, education, and enterprise products—designing experiences that balance user needs, business goals, and real-world constraints. I believe thoughtful design builds trust and creates meaningful impact.
               </p>
               
               <div 

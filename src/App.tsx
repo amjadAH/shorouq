@@ -26,7 +26,7 @@ export default function App() {
       case 'case-study-khazna-early-repayment':
         return <CaseStudyKhaznaEarlyRepayment onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
       case 'case-study-service-activation':
-        return <CaseStudyServiceActivation onBack={() => setActiveSection('home')} />;
+        return <CaseStudyServiceActivation onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
       case 'systems':
         return <SystemsFoundations onBack={() => setActiveSection('home')} onSectionChange={setActiveSection} />;
       case 'about':

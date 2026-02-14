@@ -169,12 +169,6 @@ function Container5() {
 
 export default function Container() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start pt-[32px] relative size-full" data-name="Container">
-      <Heading />
-      <Container1 />
-      <Container3 />
-      <Container4 />
-      <Container5 />
-    </div>
+    null
   );
 }

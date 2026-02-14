@@ -1,17 +1,18 @@
 import { motion } from 'motion/react';
-import { ArrowLeft } from 'lucide-react@0.487.0';
+import { ArrowLeft, ArrowRight } from 'lucide-react@0.487.0';
 import { Footer } from './Footer';
 import serviceBlueprintImage from 'figma:asset/8da819478eb58c0c2cd3b1c02b7c325a3a6aa79b.png';
 
 interface CaseStudyServiceActivationProps {
   onBack: () => void;
+  onSectionChange?: (section: string) => void;
 }
 
-export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivationProps) {
+export function CaseStudyServiceActivation({ onBack, onSectionChange }: CaseStudyServiceActivationProps) {
   return (
     <div className="min-h-screen pt-20 pb-12 bg-background">
       {/* Back Button */}
-      <section className="max-w-5xl mx-auto px-6 pt-8">
+      <section className="px-6 pt-8">
         <motion.button
           onClick={onBack}
           className="inline-flex items-center gap-2 text-[#a0a0a0] hover:text-[#ff9f7a] transition-colors group"
@@ -26,7 +27,7 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
       </section>
 
       {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,13 +44,8 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* Context Section */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,13 +92,8 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* The Investigation Section */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -142,13 +133,8 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* Service Blueprint Visual Section */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -170,13 +156,8 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
       {/* Key Breakpoints Section */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -214,13 +195,8 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
         </motion.div>
       </section>
 
-      {/* Subtle divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-[rgba(255,159,122,0.08)]" />
-      </div>
-
-      {/* Product-Level Outcome Section */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      {/* Design Recommendations Section */}
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -228,15 +204,49 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-8"
         >
-          <h2 className="text-[32px] text-[#f8f8f2]">Product-Level Outcome</h2>
+          <h2 className="text-[32px] text-[#f8f8f2]">Design Recommendations</h2>
           
           <div className="flex flex-col gap-6 max-w-3xl">
             <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
-              Insights from this blueprint directly informed the redesign of the registration flow.
+              Based on the identified bottlenecks, I recommended the following design changes:
+            </p>
+            
+            <ul className="flex flex-col gap-3 pl-6">
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Implement automated reminders for HR approvals
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Ensure status changes are consistently reflected across systems
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Break down backend dependency chains
+              </li>
+              <li className="text-[17px] text-[#a0a0a0] leading-relaxed list-disc">
+                Provide clear visibility for users during pending states
+              </li>
+            </ul>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Outcome Section */}
+      <section className="px-6 py-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-8"
+        >
+          <h2 className="text-[32px] text-[#f8f8f2]">Outcome</h2>
+          
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
+              The redesign significantly reduced activation delays and improved user satisfaction.
             </p>
             
             <p className="text-[17px] text-[#a0a0a0] leading-relaxed">
-              I introduced structured "pending" states and clearer activation visibility screens, allowing users to understand where they were in the process.
+              Users no longer needed to contact support for activation status updates, leading to a decrease in support tickets.
             </p>
 
             <div className="flex flex-col gap-4 mt-4 p-6 rounded-lg bg-[rgba(255,159,122,0.03)] border border-[rgba(255,159,122,0.1)]">
@@ -259,8 +269,41 @@ export function CaseStudyServiceActivation({ onBack }: CaseStudyServiceActivatio
         </motion.div>
       </section>
 
+      {/* Navigation */}
+      <section className="px-6 py-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-between items-center"
+        >
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-khazna-early-repayment')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span>Previous Case Study</span>
+            </button>
+          )}
+
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-khazna-registration')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <span>Next Case Study</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          )}
+        </motion.div>
+      </section>
+
       {/* Footer */}
-      <Footer />
+      <section className="px-6 py-14">
+        <Footer />
+      </section>
     </div>
   );
 }

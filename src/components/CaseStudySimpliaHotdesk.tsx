@@ -14,7 +14,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
-      <section className="max-w-6xl mx-auto px-6 pt-8">
+      <section className="px-6 pt-8">
         <motion.button
           onClick={onBack}
           className="inline-flex items-center gap-2 text-[#a0a0a0] hover:text-[#ff9f7a] transition-colors group"
@@ -24,17 +24,12 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
           whileHover={{ x: -3 }}
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Work</span>
+          <span>Back to Home</span>
         </motion.button>
       </section>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20 relative">
-        {/* Background glow */}
-        <div className="absolute inset-0 pointer-events-none" style={{
-          backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(255,159,122,0.08) 0%, transparent 50%)'
-        }} />
-        
+      <section className="px-6 py-14 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,7 +56,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
           </div>
 
           {/* Metadata grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-[rgba(255,159,122,0.1)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
               className="flex flex-col gap-3"
               initial={{ opacity: 0, y: 20 }}
@@ -128,7 +123,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Identify */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -208,7 +203,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Define */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -299,7 +294,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Explore */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -329,7 +324,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Act */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -413,7 +408,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Learn */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -438,7 +433,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Impact */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -508,7 +503,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Final Designs */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -581,7 +576,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Reflection */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -603,7 +598,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Navigation */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -611,13 +606,15 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
           transition={{ duration: 0.8 }}
           className="flex justify-between items-center"
         >
-          <button
-            onClick={onBack}
-            className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span>Back to Work</span>
-          </button>
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-khazna-referral')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span>Previous Case Study</span>
+            </button>
+          )}
 
           {onSectionChange && (
             <button
@@ -632,7 +629,7 @@ export function CaseStudySimpliaHotdesk({ onBack, onSectionChange }: CaseStudySi
       </section>
 
       {/* Footer */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <Footer />
       </section>
     </div>

@@ -9,13 +9,13 @@ export function Mentorship() {
     {
       title: 'Khazna Internship Program',
       description: 'Led the complete internship program from A to Z, designing curriculum, mentoring processes, and success metrics that helped junior designers transition into full-time roles.',
-      impact: 'Successfully onboarded 8 junior designers with 100% retention rate',
+      impact: 'Onboarded 4 junior designers with 75% retention rate',
       icon: '🎓'
     },
     {
       title: 'Junior Designer Mentorship',
       description: 'Provided one-on-one mentorship to a junior designer, focusing on design thinking, portfolio development, and career growth strategies.',
-      impact: 'Mentee promoted to mid-level designer within 6 months',
+      impact: 'Mentee promoted from junior designer to product designer within 8 months',
       icon: '🌱'
     }
   ];
@@ -61,7 +61,7 @@ export function Mentorship() {
                 <div className="flex items-start gap-6">
                   <div className="text-4xl">{highlight.icon}</div>
                   <div className="flex-1">
-                    <h2 className="text-2xl mb-4 text-foreground">{highlight.title}</h2>
+                    <h2 className="text-2xl mb-2 text-foreground">{highlight.title}</h2>
                     <p className="text-muted-foreground mb-4 leading-relaxed">
                       {highlight.description}
                     </p>

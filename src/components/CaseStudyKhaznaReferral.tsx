@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Target, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react@0.487.0';
+import Section17442 from '../imports/Section-174-42';
+import ResearchStrategySurvey from '../imports/Container-131-1986';
+import ResearchStrategyUsability from '../imports/Container-134-2184';
 
 interface CaseStudyKhaznaReferralProps {
   onBack: () => void;
@@ -11,7 +14,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
   return (
     <div className="min-h-screen pt-20 pb-12">
       {/* Back Button */}
-      <section className="max-w-6xl mx-auto px-6 pt-8">
+      <section className="px-6 pt-8">
         <motion.button
           onClick={onBack}
           className="inline-flex items-center gap-2 text-[#a0a0a0] hover:text-[#ff9f7a] transition-colors group"
@@ -21,17 +24,12 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
           whileHover={{ x: -3 }}
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Back to Work</span>
+          <span>Back to Home</span>
         </motion.button>
       </section>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20 relative">
-        {/* Background glow */}
-        <div className="absolute inset-0 pointer-events-none" style={{
-          backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(255,159,122,0.08) 0%, transparent 50%)'
-        }} />
-        
+      <section className="px-6 py-14 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +58,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
           </div>
 
           {/* Metadata grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-[rgba(255,159,122,0.1)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
               className="flex flex-col gap-3"
               initial={{ opacity: 0, y: 20 }}
@@ -127,7 +125,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Identify */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +209,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Define */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -224,74 +222,69 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
             <h2 className="text-4xl text-[#f8f8f2]">Define</h2>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             <p className="text-xl text-[#b5b5b5] leading-relaxed">
-              The core problem wasn't the incentive itself, but the lack of clarity around how the system worked.
+              The real challenge was designing a system that felt rewarding, not transactional, while addressing user concerns about privacy, the value proposition, and the mechanics of referral.
             </p>
             
-            <div className="flex flex-col gap-4">
-              <p className="text-lg text-[#d0d0d0]">The design needed to:</p>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <motion.div 
-                  className="flex gap-4 items-start p-6 rounded-lg hover:bg-[rgba(255,159,122,0.02)] transition-colors"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                >
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
-                  <p className="text-lg text-[#b5b5b5] leading-relaxed">
-                    Make referral logic transparent and easy to understand.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex gap-4 items-start p-6 rounded-lg hover:bg-[rgba(255,159,122,0.02)] transition-colors"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
-                  <p className="text-lg text-[#b5b5b5] leading-relaxed">
-                    Restore trust by clearly showing referral status and dependencies.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex gap-4 items-start p-6 rounded-lg hover:bg-[rgba(255,159,122,0.02)] transition-colors"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
-                  <p className="text-lg text-[#b5b5b5] leading-relaxed">
-                    Improve user confidence without changing backend or financial rules.
-                  </p>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex gap-4 items-start p-6 rounded-lg hover:bg-[rgba(255,159,122,0.02)] transition-colors"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
-                  <p className="text-lg text-[#b5b5b5] leading-relaxed">
-                    Reduce internal reliance on manual tracking and guesswork.
-                  </p>
-                </motion.div>
+            <p className="text-xl text-[#b5b5b5] leading-relaxed">
+              Users needed clarity around:
+            </p>
+            
+            <div className="flex flex-col gap-4 pl-4">
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
+                <p className="text-lg text-[#d0d0d0] leading-relaxed">
+                  What exactly they get for referring someone
+                </p>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
+                <p className="text-lg text-[#d0d0d0] leading-relaxed">
+                  How the referral process works and when rewards are delivered
+                </p>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
+                <p className="text-lg text-[#d0d0d0] leading-relaxed">
+                  Whether sharing their referral code affects their privacy or security
+                </p>
+              </div>
+              <div className="flex gap-4 items-start">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#ff9f7a] mt-3 flex-shrink-0" />
+                <p className="text-lg text-[#d0d0d0] leading-relaxed">
+                  How to track referrals and know if they were successful
+                </p>
               </div>
             </div>
           </div>
+
+          {/* Research Strategy - Survey Research */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mt-8"
+          >
+            <ResearchStrategySurvey />
+          </motion.div>
+
+          {/* Research Strategy - Usability Testing */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-8"
+          >
+            <ResearchStrategyUsability />
+          </motion.div>
         </motion.div>
       </section>
 
       {/* Explore */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -321,7 +314,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Act */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -405,7 +398,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Learn */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -430,7 +423,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Impact */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -500,7 +493,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Final Designs */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -560,8 +553,20 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
         </motion.div>
       </section>
 
+      {/* Screens Section */}
+      <section className="px-6 py-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <Section17442 />
+        </motion.div>
+      </section>
+
       {/* Reflection */}
-      <section className="max-w-5xl mx-auto px-6 py-20 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -583,7 +588,7 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
       </section>
 
       {/* Navigation */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-[rgba(255,159,122,0.1)]">
+      <section className="px-6 py-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -591,13 +596,15 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
           transition={{ duration: 0.8 }}
           className="flex justify-between items-center"
         >
-          <button
-            onClick={onBack}
-            className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
-          >
-            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            <span>Back to Work</span>
-          </button>
+          {onSectionChange && (
+            <button
+              onClick={() => onSectionChange('case-study-khazna-registration')}
+              className="inline-flex items-center gap-2 text-[#ff9f7a] hover:text-[#ffb394] transition-colors group"
+            >
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+              <span>Previous Case Study</span>
+            </button>
+          )}
 
           {onSectionChange && (
             <button
