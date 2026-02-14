@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, TrendingUp, DollarSign, CheckCircle, ArrowRight } from 'lucide-react@0.487.0';
+import { Footer } from './Footer';
 import ResearchStrategy from '../imports/Container-137-29';
 import UserFlowRedesigned from '../imports/Container-137-60';
 import MobileExperience from '../imports/Container-138-123';
@@ -512,6 +513,11 @@ export function CaseStudyKhaznaEarlyRepayment({ onBack, onSectionChange }: CaseS
             </button>
           )}
         </motion.div>
+      </section>
+
+      {/* Footer */}
+      <section className="max-w-6xl mx-auto px-6 py-14">
+        <Footer />
       </section>
     </div>
   );

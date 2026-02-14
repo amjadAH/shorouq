@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, Target, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react@0.487.0';
+import { Footer } from './Footer';
 import Section17442 from '../imports/Section-174-42';
 import ResearchStrategySurvey from '../imports/Container-131-1986';
 import ResearchStrategyUsability from '../imports/Container-134-2184';
@@ -616,6 +617,11 @@ export function CaseStudyKhaznaReferral({ onBack, onSectionChange }: CaseStudyKh
             </button>
           )}
         </motion.div>
+      </section>
+
+      {/* Footer */}
+      <section className="max-w-6xl mx-auto px-6 py-14">
+        <Footer />
       </section>
     </div>
   );
